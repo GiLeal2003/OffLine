@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {};
+//Atualiza partes da página conforme o usuário faz o request na página
+const nextConfig = {
+    experimental: {
+      ppr: 'incremental',
+    },
+  };
 
 export default nextConfig;
