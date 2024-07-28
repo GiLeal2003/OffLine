@@ -1,31 +1,39 @@
 //Importando data do Postgress
 import { sql } from '@vercel/postgres';
 import {
-  Cliente,
-  Estabelecimento,
-  Item,
-  Pedido,
-  Item_Pedido,
+  CustomerField,
+  CustomersTableType,
+  InvoiceForm,
+  InvoicesTable,
+  LatestInvoiceRaw,
+  User,
   Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
-const numClientes = sql`SELECT COUNT(*) FROM cliente`;
-const numEstabelecimentos = sql`SELECT COUNT(*) FROM estabelecimento`;
-const numItem = sql`SELECT COUNT(*) FROM item`;
-const numPedidos = sql`SELECT COUNT(*) FROM pedidos`;
-const numItemPedidos = sql`SELECT COUNT(*) FROM itens_pedido`;
 
 export async function fetchRevenue() {
+  // Add noStore() here to prevent the response from being cached.
+  // This is equivalent to in fetch(..., {cache: 'no-store'}).
+
   try {
+    // Artificially delay a response for demo purposes.
+    // Don't do this in production :)
+
+    // console.log('Fetching revenue data...');
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
+
     const data = await sql<Revenue>`SELECT * FROM revenue`;
+
+    // console.log('Data fetch completed after 3 seconds.');
+
     return data.rows;
   } catch (error) {
-    console.error('Erro:', error);
+    console.error('Database Error:', error);
     throw new Error('Failed to fetch revenue data.');
   }
 }
 
-export async function fetchCliente() {
+export async function fetchLatestInvoices() {
   try {
     const data = await sql<LatestInvoiceRaw>`
       SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
@@ -56,7 +64,7 @@ export async function fetchCardData() {
          SUM(CASE WHEN status = 'paid' THEN amount ELSE 0 END) AS "paid",
          SUM(CASE WHEN status = 'pending' THEN amount ELSE 0 END) AS "pending"
          FROM invoices`;
-    //Executa tudo ao mesmo tempo
+
     const data = await Promise.all([
       invoiceCountPromise,
       customerCountPromise,
@@ -154,7 +162,7 @@ export async function fetchInvoiceById(id: string) {
       // Convert amount from cents to dollars
       amount: invoice.amount / 100,
     }));
-    console.log(invoice); // Invoice is an empty array []
+
     return invoice[0];
   } catch (error) {
     console.error('Database Error:', error);
@@ -210,5 +218,15 @@ export async function fetchFilteredCustomers(query: string) {
   } catch (err) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch customer table.');
+  }
+}
+
+export async function getUser(email: string) {
+  try {
+    const user = await sql`SELECT * FROM users WHERE email=${email}`;
+    return user.rows[0] as User;
+  } catch (error) {
+    console.error('Failed to fetch user:', error);
+    throw new Error('Failed to fetch user.');
   }
 }
