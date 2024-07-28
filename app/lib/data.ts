@@ -1,37 +1,31 @@
 //Importando data do Postgress
 import { sql } from '@vercel/postgres';
 import {
-  CustomerField,
-  CustomersTableType,
-  InvoiceForm,
-  InvoicesTable,
-  LatestInvoiceRaw,
+  Cliente,
+  Estabelecimento,
+  Item,
+  Pedido,
+  Item_Pedido,
   Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
-const invoiceCountPromise = sql`SELECT COUNT(*) FROM invoices`;
-const customerCountPromise = sql`SELECT COUNT(*) FROM customers`;
+const numClientes = sql`SELECT COUNT(*) FROM cliente`;
+const numEstabelecimentos = sql`SELECT COUNT(*) FROM estabelecimento`;
+const numItem = sql`SELECT COUNT(*) FROM item`;
+const numPedidos = sql`SELECT COUNT(*) FROM pedidos`;
+const numItemPedidos = sql`SELECT COUNT(*) FROM itens_pedido`;
 
 export async function fetchRevenue() {
   try {
-    // Artificially delay a response for demo purposes.
-    // Don't do this in production :)
-
-     //console.log('Fetching revenue data...');
-     //await new Promise((resolve) => setTimeout(resolve, 3000));
-
     const data = await sql<Revenue>`SELECT * FROM revenue`;
-
-     //console.log('Data fetch completed after 3 seconds.');
-
     return data.rows;
   } catch (error) {
-    console.error('Database Error:', error);
+    console.error('Erro:', error);
     throw new Error('Failed to fetch revenue data.');
   }
 }
 
-export async function fetchLatestInvoices() {
+export async function fetchCliente() {
   try {
     const data = await sql<LatestInvoiceRaw>`
       SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
