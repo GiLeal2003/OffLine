@@ -1,0 +1,118 @@
+
+.container {
+    max-width: 360px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    font-family: 'Inter', sans-serif;
+  }
+    
+    .header {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      font-size: small;
+    }
+    
+    .header p {
+      margin-bottom: 10px;
+    }
+    
+    .content {
+      padding: 20px;
+    }
+    
+    .content p {
+      margin-bottom: 20px;
+    }
+  
+    .you{
+      font-weight: 800;
+      font-size: 25px;
+    }
+    
+    
+    .button_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .confirm_button {
+      background-color: #CC081B;
+      color: #fff;
+      padding: 20px 50px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    
+    .cancel_button {
+      background-color: #ccc;
+      color: #333;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .confirm_button:hover {
+      background-color: #F00A21;
+    }
+    
+    .cancel_button:hover {
+      background-color: #aaa;
+    }
+
+    .footer {
+      bottom: 0;
+      background-color: #f9f9f9;
+      border: 3px solid black;
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    
+      position: sticky;
+      bottom: 10px;
+    }
+    
+    .footer button {
+      border: none;
+      padding: 2px 2px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 5px;
+    }
+    
+    .footer button:hover {
+      background-color: #fff;
+    }
+    
+    .icon1 {
+      width: 2em;
+      height: 2em;
+    }
+    
+    .icon2 {
+      width: 2.5em;
+      height: 2em;
+    }
+    
+    .icon3 {
+      width: 2.7em;
+      height: 2em;
+    }
+    
+    .icon4 {
+      width: 2.5em;
+      height: 2em;
+    }
+    

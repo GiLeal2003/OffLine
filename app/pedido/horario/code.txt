@@ -1,0 +1,135 @@
+//todos os códigos abaixo funcionam. Não atendem aos requisitos.
+
+/*const horaListItemsTemp: { label: string }[] = [];
+    for (let hour = 6; hour <= 23; hour++) {
+      for (let minute = 0; minute < 60; minute += 15) {
+        const hora = new Date();
+        hora.setHours(hour);
+        hora.setMinutes(minute);
+        horaListItemsTemp.push({
+          label: hora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }),
+        });
+      }
+    }
+    setHoraListItems(horaListItemsTemp);
+  }, []);*/
+
+  /*const horaListItemsTemp: { label: string }[] = [];
+    for (let i = 0; i < 12; i++) {
+      const hora = new Date(today.getTime() + i * 60 * 60 * 1000);
+      horaListItemsTemp.push({
+        label: hora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }),
+      });
+    }
+    setHoraListItems(horaListItemsTemp);
+  }, []);*/
+
+  /*const horaListItemsTemp: { label: string, label2: string }[] = [];
+    for (let i = 6; i < 24; i++) {
+      for (let j = 0; j < 4; j++) {
+        const hora = new Date();
+        hora.setHours(i);
+        hora.setMinutes(j * 15);
+        const hora2 = new Date(hora.getTime() + 15 * 60 * 1000);
+        horaListItemsTemp.push({
+          label: hora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }),
+          label2: hora2.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
+        });
+      }
+    }
+    setHoraListItems(horaListItemsTemp);}, []);*/
+
+
+/*const DiaList: React.FC<{ items: DiaListItem[] }> = ({ items }) => {
+  return (
+    <ul className={styles.diaList}>
+      {items.map((item, index) => (
+        <li key={index} className={styles.diaListItem}>
+          <span>{item.label}</span>
+          <span>{item.date}</span>
+        </li>
+      ))}
+    </ul>
+  );
+};*/
+
+
+
+/*useEffect(() => {
+    const today = new Date();
+    const diaListItemsTemp: DiaListItem[] = [];
+    for (let i = 0; i < 5; i++) {
+      const date = new Date(today.getTime() + i * 24 * 60 * 60 * 1000);
+      diaListItemsTemp.push({
+        label: getDayOfWeek(date.getDay()),
+        date: date.toLocaleDateString('pt-BR', { day: 'numeric' }),
+      });
+    }
+    setDiaListItems(diaListItemsTemp);*/
+
+
+
+
+    /*useEffect(() => {
+      const today = new Date();
+      const diaListItemsTemp: DiaListItem[] = [];
+      for (let i = 0; i < 5; i++) {
+        const date = new Date(today.getTime() + i * 24 * 60 * 60 * 1000);
+        let label = getDayOfWeek(date.getDay());
+        if (i === 0) {
+          label = 'Hoje';
+        }
+        diaListItemsTemp.push({
+          label,
+          date: date.toLocaleDateString('pt-BR', { day: 'numeric' }),
+        });
+      }
+      setDiaListItems(diaListItemsTemp);*/
+
+
+
+      
+
+/*const DiaList: React.FC<{ items: DiaListItem[] }> = ({ items }) => {
+  return (
+    <ul className={styles.diaList}>
+      {items.map((item, index) => (
+        <li key={index} className={styles.diaListItem}>
+          <span>{item.label === 'Hoje' ? <strong>{item.label}</strong> : item.label}</span>
+          <span>{item.date}</span>
+        </li>
+      ))}
+    </ul>
+  );
+};*/
+
+
+
+
+/*const handleDayChange = (day: DiaListItem) => {
+    const selectedDate = new Date(day.date);
+    const now = new Date(selectedDate.getTime());
+    const currentHour = now.getHours();
+    const currentMinute = now.getMinutes();
+  
+    const horaListItemsTemp: { label: string, label2: string }[] = [];
+    for (let i = 0; i < 96; i++) { // 96 é o número de intervalos de 15 minutos em um dia
+      const hora = new Date(now.getTime() + i * 15 * 60 * 1000);
+      const hora2 = new Date(hora.getTime() + 15 * 60 * 1000);
+      if (hora.getHours() >= 6 && hora.getHours() <= 22) { // 06:00 and 23:00
+        horaListItemsTemp.push({
+          label: hora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }),
+          label2: hora2.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
+        });
+      }
+    }
+  
+    
+    const currentTime = new Date();
+    horaListItemsTemp.filter((item) => {
+      const hora = new Date(item.label);
+      return hora.getTime() >= currentTime.getTime();
+    });
+  
+    setHoraListItems(horaListItemsTemp);
+  };*/

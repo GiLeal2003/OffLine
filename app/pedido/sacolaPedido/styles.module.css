@@ -1,0 +1,135 @@
+
+.container {
+  max-width: 360px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.backButton {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #CC081B;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.total span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.price {
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.pending {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffd900d7;
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin-top: 20px;
+}
+
+.produtoList {
+  max-width: 400px;
+  padding: 20px;
+}
+
+.produtoItemTitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.produtoItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.produto {
+  font-size: 90%;
+  color: #333;
+  word-break:normal;
+}
+
+.produtoSubtotal {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.confirmButton {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #CC081B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10%;
+  font-weight: bold;
+}
+
+.confirmButton:hover {
+  background-color: #CC081B;
+}

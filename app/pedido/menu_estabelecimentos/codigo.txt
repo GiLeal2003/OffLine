@@ -1,0 +1,111 @@
+
+'use client';
+
+import React, { useState } from 'react';
+import styles from './styles.module.css';
+
+interface Estabelecimento {
+  nome: string;
+  localizacao: string;
+  avaliacao: number;
+}
+
+const estabelecimentos: Estabelecimento[] = [
+  {
+    nome: 'Cafeteria & Confeitaria',
+    localizacao: 'Localização',
+    avaliacao: 5.0,
+  },
+  {
+    nome: 'Restaurante A',
+    localizacao: 'Localização',
+    avaliacao: 4.0,
+  },
+  {
+    nome: 'Doceria A',
+    localizacao: 'Localização',
+    avaliacao: 3.5,
+  },
+  {
+    nome: 'Doceria B',
+    localizacao: 'Localização',
+    avaliacao: 4.0,
+  },
+  {
+    nome: 'Restaurante B',
+    localizacao: 'Localização',
+    avaliacao: 5.0,
+  },
+];
+
+
+const pages = ['Products', 'Pricing', 'Blog'];
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+function ResponsiveAppBar() {
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredEstabelecimentos = estabelecimentos.filter((estabelecimento) =>
+    estabelecimento.nome.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  
+  return (
+    <div className={styles.container}>
+      <header>
+        <title>LISTA DOS ESTABELECIMENTOS ALIMENTÍCIOS</title>
+      </header>
+
+      <div className={styles.barraBusca}>
+        <input
+          type="search"
+value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Buscar"
+        />
+        <button type="submit">Buscar</button>
+      </div>
+
+      <div className={styles.estabelecimentoList}>
+        {filteredEstabelecimentos.map((estabelecimento) => (
+          <div key={estabelecimento.nome} className={styles.estabelecimentoCard}>
+            <h2>{estabelecimento.nome}</h2>
+            
+            <div className={styles.avaliacao}>
+              {[...Array(Math.max(0, Math.min(5, parseInt(estabelecimento.avaliacao.toString()))))].map((_, i) => (
+                <span key={i}>&#x2605;</span>
+              ))}
+              {[...Array(Math.max(0, 5 - Math.min(5, parseInt(estabelecimento.avaliacao.toString()))))].map((_, i) => (
+                <span key={i}>&#x2606;</span>
+              ))}
+            </div>
+
+            <p>{estabelecimento.localizacao}</p>
+          </div>
+        ))}
+      </div>
+      
+    </div>
+    
+  );
+}
+export default ResponsiveAppBar;
+

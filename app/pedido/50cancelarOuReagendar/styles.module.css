@@ -1,0 +1,135 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    max-width: 360px;
+    margin: 20px auto;
+    padding: 20px 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    margin-bottom: 30px;
+    margin-left: 0;
+  margin-right: auto;
+  display: block;
+  }
+  
+  .voltar {
+    background-color: #CC081B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    
+  }
+  
+  .voltar:hover {
+    background-color: #FF0000;
+  }
+  
+  .pedido_info {
+    margin-bottom: 60px;
+  }
+  
+  .pedido_info p {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .conj{
+    margin-top: 30px;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cancelar {
+    background-color: #CC081B;
+    color: #fff;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .cancelar:hover {
+    background-color: #FF0000;
+  }
+  
+  .reagendar {
+    background-color: #CC081B;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+
+  .reagendar:hover {
+    background-color: #FF0000;
+  }
+
+  .footer {
+    bottom: 0;
+    background-color: #f9f9f9;
+    border: 3px solid black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  
+    position: sticky;
+    bottom: 10px;
+  }
+  
+  .footer button {
+    border: none;
+    padding: 2px 2px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .footer button:hover {
+    background-color: #fff;
+  }
+  
+  .icon1 {
+    width: 2em;
+    height: 2em;
+  }
+  
+  .icon2 {
+    width: 2.5em;
+    height: 2em;
+  }
+  
+  .icon3 {
+    width: 2.7em;
+    height: 2em;
+  }
+  
+  .icon4 {
+    width: 2.5em;
+    height: 2em;
+  }
+  

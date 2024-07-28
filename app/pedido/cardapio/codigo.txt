@@ -1,0 +1,544 @@
+
+
+'use client';
+
+import React, { useState } from 'react';
+import styles from './styles.module.css';
+
+
+export default function Page() {
+  return (
+    <div className={styles.app}>
+      <button className={styles.backButton}>Voltar</button>
+      <h1 className={styles.title}>Deola Café</h1>
+      <ProdutoLista />
+      <button className={styles.confirmar_button}>Confirmar Pedido</button>
+    </div>
+  );
+}
+
+interface Props {
+    nome: string;
+    descricao: string;
+    preco: number; 
+    quantidade: number;
+    onQuantidadeChange: (quantidade: number) => void;
+  }
+  
+  const ProdutoCard: React.FC<Props> = ({ nome, descricao, preco, quantidade, onQuantidadeChange }) => {
+  const handleQuantidadeChange = (delta: number) => {
+    onQuantidadeChange(quantidade + delta);
+  };
+
+  return (
+    
+
+    <div className={styles.produto_card}>
+      <img src="https://via.placeholder.com/50" alt="Produto" className={styles.produto_image} />
+      
+      <div className={styles.produto_info}>
+        <h3 className={styles.produto_nome}>{nome}</h3>
+        <p className={styles.produto_descricao}>{descricao}</p>
+        <div className={styles.product_preco}>R$ {preco.toFixed(2)}</div>
+        
+        <div className={styles.product_quantidade}>
+          <button className={styles.quantidade_button} onClick={() => handleQuantidadeChange(-1)}>-</button>
+          <span className={styles.quantidade_value}>{quantidade}</span>
+          <button className={styles.quantidade_button} onClick={() => handleQuantidadeChange(1)}>+</button>
+        </div>
+        
+      </div>
+    </div>
+  );
+};
+
+const ProdutoLista = () => {
+  const [produto1Quantidade, setProduto1Quantidade] = React.useState(1);
+  const [produto2Quantidade, setProduto2Quantidade] = React.useState(0);
+  const [produto3Quantidade, setProduto3Quantidade] = React.useState(1);
+
+  return (
+
+
+
+    <div className={styles.produto_lista}>
+      <ProdutoCard
+        nome="Lasanha (mista ou berinjela)"
+        descricao="Coberta com molho de tomate ao sugo e queijo parmesão ralado."
+        preco={38.6}
+        quantidade={produto1Quantidade}
+        onQuantidadeChange={setProduto1Quantidade}
+      />
+      <ProdutoCard
+        nome="Pão Delícia"
+        descricao="Descrição do produto"
+        preco={13.6}
+        quantidade={produto2Quantidade}
+        onQuantidadeChange={setProduto2Quantidade}
+      />
+      <ProdutoCard
+        nome="Coca-Cola"
+        descricao="Descrição do produto"
+        preco={8.6}
+        quantidade={produto3Quantidade}
+        onQuantidadeChange={setProduto3Quantidade}
+      />
+    </div>
+  );
+};
+
+
+<button className={styles.backButton}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          className="bi bi-arrow-left"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fillRule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+          />
+        </svg>
+      </button>
+
+
+
+
+
+'use client';
+
+import React, { useState } from 'react';
+import styles from './styles.module.css';
+
+const produtos = [
+  {
+    nome: 'Pão Francês na Chapa',
+    descricao: 'Descrição',
+    preco: 6.4,
+    quantidade: 1,
+  },
+  {
+    nome: 'Pão de Queijo 200g',
+    descricao: 'Descrição',
+    preco: 16,
+    quantidade: 0,
+  },
+  {
+    nome: 'Tapioca de Coco c/ Leite Condensado',
+    descricao: 'Descrição',
+    preco: 22.7,
+    quantidade: 1,
+  },
+  {
+    nome: 'Beirute Simples',
+    descricao: 'Descrição',
+    preco: 6,
+    quantidade: 1,
+  },
+  {
+    nome: 'Coxinha',
+    descricao: 'Descrição',
+    preco: 10.5,
+    quantidade: 0,
+  },
+  {
+    nome: 'Pudim',
+    descricao: 'Descrição',
+    preco: 12.2,
+    quantidade: 1,
+  },
+  {
+    nome: 'Torta de Limão',
+    descricao: 'Descrição',
+    preco: 13.4,
+    quantidade: 1,
+  },
+  {
+    nome: 'Pão doce',
+    descricao: 'Descrição',
+    preco: 0,
+    quantidade: 0,
+  },
+];
+
+export default function Page() {
+  const [carrinho, setCarrinho] = useState<Produto[]>([]);
+
+  const handleAdicionar = (produto: Produto) => {
+    const novoCarrinho = [...carrinho, produto];
+    setCarrinho(novoCarrinho);
+  };
+
+  const handleRemover = (produto: Produto) => {
+    const novoCarrinho = carrinho.filter((item) => item !== produto);
+    setCarrinho(novoCarrinho);
+  };
+
+  const handleQuantidadeChange = (produto: Produto, delta: number) => {
+    const novoCarrinho = carrinho.map((item) => {
+      if (item === produto) {
+        return { ...item, quantidade: item.quantidade + delta };
+      }
+      return item;
+    });
+    setCarrinho(novoCarrinho);
+  };
+
+
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredEstabelecimentos = produtos.filter((produtos) =>
+    produtos.nome.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+
+  return (
+    
+    <div className={styles.container}>
+      
+      <div className={styles.top}>
+      <header className={styles.header}>
+        <div className={styles.profile}>
+        <button className={styles.backButton}>VOLTAR
+        </button>
+        </div>
+        <div className={styles.actions}>
+          <div className={styles.shoppingBag}></div>
+          <div className={styles.settings}></div>
+        </div>
+      </header>
+
+      <div className={styles.barraBusca}>
+        <div className={styles.searchIcon}></div>
+        <input
+          type="search"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Buscar"
+        />
+      </div>
+      </div>
+
+      <h1 className={styles.title}>Cafeteria</h1>
+      <div className={styles.produto_lista}>
+      
+        {produtos.map((produto) => (
+          <ProdutoCard
+            key={produto.nome}
+            produto={produto}
+            onAdd={() => handleAdicionar(produto)}
+            onRemove={() => handleRemover(produto)}
+            onQuantidadeChange={(delta) =>
+              handleQuantidadeChange(produto, delta)
+            }
+          />
+        ))}
+      </div>
+      <div className={styles.footer}>
+      <button className={styles.confirmar_button}>Confirmar Pedido</button>
+      </div>
+    </div>
+  );
+}
+
+interface ProdutoProps {
+  produto: Produto;
+  onAdd: () => void;
+  onRemove: () => void;
+  onQuantidadeChange: (delta: number) => void;
+}
+
+interface Produto {
+  nome: string;
+  descricao: string;
+  preco: number;
+  quantidade: number;
+}
+
+const ProdutoCard: React.FC<ProdutoProps> = ({
+  produto,
+  onAdd,
+  onRemove,
+  onQuantidadeChange,
+}) => {
+  return (
+    <div className={styles.produto_card}>
+      <img
+        src="https://via.placeholder.com/50"
+        alt="Produto"
+        className={styles.produto_image}
+      />
+      <div className={styles.produto_info}>
+        <h3 className={styles.produto_nome}>{produto.nome}</h3>
+        <p className={styles.produto_descricao}>{produto.descricao}</p>
+        <div className={styles.product_preco}>R$ {produto.preco.toFixed(2)}</div>
+        <div className={styles.produto_quantidade}>
+          <button
+            className={styles.quantidade_button}
+            onClick={() => onQuantidadeChange(-1)}
+          >
+            -
+          </button>
+          <span className={styles.quantidade_value}>
+            {produto.quantidade}
+          </span>
+          <button
+            className={styles.quantidade_button}
+            onClick={() => onQuantidadeChange(1)}
+          >
+            +
+          </button>
+        </div>
+          <button className={styles.add_button} onClick={onAdd}>
+            ADICIONAR
+          </button>
+      </div>
+    </div>
+  );
+};
+
+
+
+
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.backButton {
+  background-color: #CC081B;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.backButton:hover {
+  background-color: #F00A21;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top {
+  position: sticky;
+  top: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 10px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.shoppingBag {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  margin-left: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settings {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  margin-left: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.barraBusca {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.barraBusca input[type="search"] {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.produto_lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.produto_card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+
+.produto_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.produto_nome {
+  font-weight: bold;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.produto_descricao {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product_preco {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.produto_quantidade {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.quantidade_button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.quantidade_button:hover {
+  background-color: #ccc;
+}
+
+.quantidade_value {
+  font-size: 14px;
+  color: #666;
+  margin: 0 5px;
+}
+
+.add_button {
+  background-color: #CC081B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.add_button:hover {
+  background-color: #F00A21;
+}
+
+.confirmar_button {
+  background-color: #CC081B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.confirmar_button:hover {
+  background-color: #F00A21;
+}
+
+.footer {
+  bottom: 0;
+  background-color: #f9f9f9;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: sticky;
+  bottom: 10px;
+}
+
+

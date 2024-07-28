@@ -1,0 +1,109 @@
+
+.container {
+    max-width: 360px;
+    height: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .back_button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0;
+  margin-right: auto;
+  display: block;
+  }
+
+  .back_button:hover {
+    background-color: #F00A21;
+  }
+
+  .img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .login_form {
+    max-width: 300px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login_form.MuiTextField:root {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .login_form.MuiButton:root {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #F00A21;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .login_form.MuiButton:root:hover {
+    background-color: red;
+  }
+  
+  .login_form.forgot_password {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  .login_form.register {
+    font-size: 14px;
+    color: #F00A21;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  .button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .button:hover {
+    background-color: #F00A21;
+  }
+  
+  
+  
+ 

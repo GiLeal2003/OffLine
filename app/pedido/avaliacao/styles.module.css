@@ -1,0 +1,194 @@
+
+
+.container {
+  max-width: 360px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+/*.backButton {
+  font-size: var(--font-size);
+  color: #fff;
+  background-color: #CC081B;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}<button className={styles.backButton}>VOLTAR</button>
+.backButton:hover {
+  background-color: #F00A21;
+}*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top {
+  position: sticky;
+  top: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.img {
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.total span {
+  font-size: var(--font-size);
+  font-weight: bold;
+  color: #333;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.inputText {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.confirmaButton {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #CC081B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.confirmaButton:hover {
+  background-color: #F00A21;
+}
+
+
+.confirmaButton2 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d35360;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.confirmaButton2:hover {
+  background-color: #F00A21;
+}
+
+.footer {
+  bottom: 0;
+  background-color: #f9f9f9;
+  border: 3px solid black;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+
+  position: sticky;
+  bottom: 10px;
+}
+
+.footer button {
+  border: none;
+  padding: 2px 2px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.footer button:hover {
+  background-color: #fff;
+}
+
+.icon1 {
+  width: 2em;
+  height: 2em;
+}
+
+.icon2 {
+  width: 2.5em;
+  height: 2em;
+}
+
+.icon3 {
+  width: 2.7em;
+  height: 2em;
+}
+
+.icon4 {
+  width: 2.5em;
+  height: 2em;
+}
+

@@ -1,0 +1,96 @@
+
+.container {
+    max-width: 360px;
+    margin: 20px auto;
+    padding: 20px 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .content {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 70%;
+  }
+  
+  .p {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .text {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+  
+  .buttonC {
+    background-color: #f00;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .buttonC:hover {
+    background-color: #c00;
+  }
+
+  .footer {
+    bottom: 0;
+    background-color: #f9f9f9;
+    border: 3px solid black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    position: sticky;
+    bottom: 10px;
+  }
+  
+  .footer button {
+    border: none;
+    padding: 2px 2px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .footer button:hover {
+    background-color: #fff;
+  }
+  
+  .icon1 {
+    width: 2em;
+    height: 2em;
+  }
+  
+  .icon2 {
+    width: 2.5em;
+    height: 2em;
+  }
+  
+  .icon3 {
+    width: 2.7em;
+    height: 2em;
+  }
+  
+  .icon4 {
+    width: 2.5em;
+    height: 2em;
+  }
+  

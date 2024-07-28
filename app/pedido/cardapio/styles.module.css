@@ -1,0 +1,309 @@
+
+.container {
+  max-width: 360px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+.backButton {
+  background-color: #CC081B;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.backButton:hover {
+  background-color: #F00A21;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top {
+  position: sticky;
+  top: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.shoppingBag {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.settings {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.barraBusca {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.barraBusca input[type="search"] {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.title {
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  border-bottom: black solid 2px;
+}
+
+.menuButton {
+  background-color: #ddd;
+  color: #333;
+  border-bottom: rgba(0, 0, 0, 0.096) solid 2px;
+  padding: 5px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.menuButton:hover {
+  background-color: #CC081B;
+  color: #fff;
+}
+
+.produto_lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.produto_card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.produto_image {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.produto_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.produto_nome {
+  font-weight: bold;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.produto_descricao {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product_preco {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.produto_quantidade {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.quantidade_button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.quantidade_button:hover {
+  background-color: #ccc;
+}
+
+.quantidade_value {
+  font-size: 14px;
+  color: #666;
+  margin: 0 5px;
+}
+
+.add_button {
+  background-color: #CC081B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.add_button:hover {
+  background-color: #F00A21;
+}
+
+.confirmar_button {
+  background-color: #CC081B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.confirmar_button:hover {
+  background-color: #F00A21;
+}
+
+.boxBtn {
+  bottom: 0;
+  background-color: #f9f9f9;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: sticky;
+  bottom: 9%;
+}
+
+.footer {
+  background-color: #f9f9f9;
+  border: 3px solid black;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  bottom: 10px;
+}
+
+.footer button {
+  border: none;
+  padding: 2px 2px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.footer button:hover {
+  background-color: #fff;
+}
+
+.icon1 {
+  width: 2em;
+  height: 2em;
+}
+
+.icon2 {
+  width: 2.5em;
+  height: 2em;
+}
+
+.icon3 {
+  width: 2.7em;
+  height: 2em;
+}
+
+.icon4 {
+  width: 2.5em;
+  height: 2em;
+}

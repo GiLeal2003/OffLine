@@ -1,0 +1,156 @@
+
+.container {
+  max-width: 360px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+.menu {
+position: sticky;
+background-color: #f9f9f9;
+top: 0;
+padding: 16px;
+border-bottom: 1px solid #ddd;
+text-align: center;
+}
+
+.backButton {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #CC081B;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.backButton:hover {
+  background-color: #F00A21;
+}
+
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.title3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.diaList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.diaListItem {
+  margin: 1%;
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 10%;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #fefcfc;
+}
+
+.diaListItem span {
+  display: block;
+  font-size: 110%;
+  font-weight: bold;
+  margin-top: 10%;
+}
+
+.diaListItem.selected:hover {
+  color: #333;
+}
+
+
+.agendamento {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin-top: 50px;
+}
+
+.horaSlots {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.horaSlots li {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+
+.horaSlots button {
+  margin: 0;
+  padding: 10px;
+  border: none;
+  background-color: #fefcfc;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  border: black solid 2px;
+  width: 100%;
+}
+
+.horaSlots button:hover {
+  background-color: #e3e0e0a6;
+}
+
+.today {
+  font-weight: bold;
+}
+
+.confirmarBtn {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #CC081B;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+
+  position: sticky;
+  bottom: 10px;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.confirmarBtn:hover {
+  background-color: #F00A21;
+}

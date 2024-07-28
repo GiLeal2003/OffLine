@@ -1,3 +1,4 @@
+//Parte para lidar com o erro 404
 import Link from 'next/link';
 import { FaceFrownIcon } from '@heroicons/react/24/outline';
  

@@ -1,0 +1,84 @@
+.container {
+    max-width: 360px;
+    margin: 20px auto;
+    padding: 20px 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+  }
+
+  .back_button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .back_button:hover {
+    background-color: #F00A21;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .card_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .img {
+    width: 200px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .h2 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  .title {
+    font-weight: 600;
+  }
+  
+  .p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .question {
+    color: #31e346;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .confirm_button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 18px;
+    background-color: #CC081B;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .confirm_button:hover {
+    background-color: #F00A21;
+  }
+  

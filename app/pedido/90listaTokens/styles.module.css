@@ -1,0 +1,136 @@
+
+.container {
+    font-family: Arial, sans-serif;
+    max-width: 360px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .back_button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .back_button:hover {
+    background-color: #F00A21;
+  }
+  
+  .h1 {
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+
+  .h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #f44336;
+    font-weight: 500;
+    border-bottom: solid #f44336;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .token_list {
+    margin-top: 20px;
+  }
+  
+  .token_item {
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #444;
+    margin-bottom: 10%;
+    border-radius: 10px;
+    box-shadow: #444 0 0 5px;
+    cursor: pointer;
+  }
+  
+  .token_item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .token_info {
+    margin-bottom: 10px;
+  }
+  
+  .token_actions {
+    text-align: center;
+  }
+  
+  .h3{
+    font-weight: bold;
+  }
+  
+  
+  .selected_token {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+
+
+  .footer {
+    bottom: 0;
+    background-color: #f9f9f9;
+    border: 3px solid black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    position: sticky;
+    bottom: 10px;
+  }
+  
+  .footer button {
+    border: none;
+    padding: 2px 2px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .footer button:hover {
+    background-color: #fff;
+  }
+  
+  .icon1 {
+    width: 2em;
+    height: 2em;
+  }
+  
+  .icon2 {
+    width: 2.5em;
+    height: 2em;
+  }
+  
+  .icon3 {
+    width: 2.7em;
+    height: 2em;
+  }
+  
+  .icon4 {
+    width: 2.5em;
+    height: 2em;
+  }
+  
