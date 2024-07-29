@@ -97,3 +97,87 @@ export type InvoiceForm = {
   amount: number;
   status: 'pending' | 'paid';
 };
+
+
+
+
+
+
+/*export type User = {
+  cod: number;
+  nome: string;
+};
+
+export type Customer = {
+  cod: number;
+  nome: string;
+};
+
+export type Invoice = {
+  cod: number,
+  datas: string,
+  statusPedido: 'Em andamento' | 'Cancelado' | 'Finalizado',
+  tipo_pagamento: string,
+  valor_total: number,
+  cod_cliente: number,
+  cod_estabelecimento: number,
+};
+
+export type Revenue = {
+  mes: string;
+  lucro: number;
+};
+
+export type LatestInvoice = {
+  cod: number;
+  nome: string;
+  imagem: string;
+  valor_total: string;
+};
+
+// The database returns a number for amount, but we later format it to a string with the formatCurrency function
+export type LatestInvoiceRaw = Omit<LatestInvoice, 'valor_total'> & {
+  valor_total: number;
+};
+
+export type InvoicesTable = {
+  cod: number;
+  cliente_imagem: string;
+  nome: string;
+  imagem: string;
+  datas: string;
+  valor_total: number;
+  statusPedido: 'Em andamento' | 'Cancelado' | 'Finalizado',
+};
+
+export type CustomersTableType = {
+  cod: number;
+  nome: string;
+  imagem: string;
+  total_pedidos: number;
+  total_concluidos: number;
+  total_andamento: number;
+  total_cancelado: number;
+};
+
+export type CustomerField = {
+  cod: string;
+  nome: string;
+  imagem: string;
+  total_pedidos: number;
+  total_concluidos: number;
+  total_andamento: number;
+  total_cancelado: number;
+};
+
+export type ClienteField = {
+  cod: string;
+  nome: string;
+};
+
+export type InvoiceForm = {
+  cod: string;
+  cod_cliente: string;
+  valor_total: number;
+  statusPedido: 'Em andamento' | 'Cancelado' | 'Finalizado',
+};*/
